@@ -53,7 +53,6 @@ class TaskPermissionsTests(APITestCase):
         response = self.client.get(self.detail_url)
         # DRF typically returns 404 (Not Found) for queryset filtering 
         # or 403 (Forbidden) depending on where the check happens.
-        # Given your get_queryset, it likely returns 404 because the object isn't in their list.
         self.assertTrue(response.status_code in [status.HTTP_403_FORBIDDEN, status.HTTP_404_NOT_FOUND])
 
         # Try to Delete (DELETE)
@@ -82,7 +81,7 @@ class AuthTests(APITestCase):
         self.user_data = {
             'username': 'testuser',
             'password': 'testpassword123',
-            'email': 'test@example.com' # Email is often required by RegisterSerializer
+            'email': 'test@example.com'
         }
         self.user = User.objects.create_user(
             username='existinguser', 

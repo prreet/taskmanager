@@ -9,7 +9,7 @@ router.register(r"tasks", TaskViewSet, basename="task")
 urlpatterns = [
     # auth
     path("auth/register/", RegisterAPIView.as_view(), name="auth-register"),
-    path("auth/login/", CustomTokenObtainPairView.as_view(), name="auth-login"),  # returns access + refresh
+    path("auth/login/", CustomTokenObtainPairView.as_view(), name="auth-login"),
     path("auth/refresh/", CustomTokenRefreshView.as_view(), name="auth-refresh"),
     path("auth/verify/", TokenVerifyView.as_view(), name="token-verify"),
     # tasks

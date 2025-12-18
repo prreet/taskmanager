@@ -16,5 +16,4 @@ class Command(BaseCommand):
         for p in perms:
             admin_group.permissions.add(p)
         # For users, give add/change/delete/view their own tasks through object permission checks
-        # We will not give global permissions to User group to ensure object-level checking in code.
         self.stdout.write(self.style.SUCCESS("Created groups and assigned permissions."))
