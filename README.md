@@ -3,7 +3,7 @@
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/prreet/taskmanager.git
 cd taskmanager
 ```
 
@@ -31,7 +31,6 @@ docker-compose exec web python manage.py create_groups
 # Create 'Admin' credentials 
 docker-compose exec web python manage.py createsuperuser
 ```
-
 
 ---
 
@@ -141,8 +140,6 @@ You can add query parameters to the **List** command.
 
 ---
 
-
-
 ## Role-Based Access Control (RBAC) Check
 
 1. **Standard User:**
@@ -166,8 +163,6 @@ You can add query parameters to the **List** command.
    * **Result:** `200 OK` (Admin access works).
 
 ---
-
-
 
 ## API Endpoints
 
